@@ -7,8 +7,9 @@ import ComplimentCenter from './Components/ComplimentCenter'
 import Footer from './Components/Footer'
 
 const AppContainer = styled.div`
-	display: flex;
-	justify-content: center;
+  display: flex;
+  flex-direction: column;
+	align-items: center;
   width: 100%;
   height: 100vh;
   overflow: hidden;

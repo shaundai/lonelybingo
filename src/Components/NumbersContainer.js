@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { Colors } from "../util/Colors"
 
 const NumbersWrapper = styled.div`
-	height: 2vh;
+	height: 5vh;
 	background-color: ${Colors.blue};
 `
 

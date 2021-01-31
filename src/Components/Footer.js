@@ -1,26 +1,25 @@
 import React from "react"
 import styled from "styled-components"
-import Emoji from '../util/Emoji'
+import Emoji from "../util/Emoji"
 import { Colors } from "../util/Colors"
 
 const FooterWrapper = styled.div`
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	height: 4vh;
-	background-color: ${Colors.blue};
+	background-color: ${Colors.darkBlue};
+	width: 100vw;
+	color: ${Colors.offWhite};
 `
 
-const EmojiHeart = props => (
-  <span
-      className="emoji"
-      role="img"
-      aria-label={props.label ? props.label : ""}
-      aria-hidden={props.label ? "false" : "true"}
-  >
-      {props.symbol}
-  </span>
-);
-
 const Footer = () => {
-	return <FooterWrapper>Made with <Emoji src="https://unicode.org/emoji/charts/full-emoji-list.html#1f48b" label="heart"></Emoji>love by Shaundai Person</FooterWrapper>
+	return (
+		<FooterWrapper>
+			Made with <Emoji symbol="❤️" label="red heart"></Emoji> by{" "}
+			<a href="http://www.shaundai.com">Shaundai Person</a>
+		</FooterWrapper>
+	)
 }
 
 export default Footer

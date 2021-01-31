@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+import styled from "styled-components"
+import { Colors } from "./util/Colors"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import NumbersContainer from "./Components/NumbersContainer"
+import ComplimentCenter from './Components/ComplimentCenter'
+import Footer from './Components/Footer'
+
+const AppContainer = styled.div`
+	display: flex;
+	justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+	background-color: ${Colors.blue};
+`
+
+const App = () => {
+	return (
+		<AppContainer>
+			<NumbersContainer />
+      <ComplimentCenter />
+      <Footer />
+		</AppContainer>
+	)
 }
 
-export default App;
+export default App

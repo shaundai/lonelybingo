@@ -3,4 +3,5 @@ export const Colors = {
   blue: 'lightblue',
   darkBlue: 'darkblue',
   offWhite: 'white',
+  gray: 'gray'
 }

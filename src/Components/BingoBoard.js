@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import Grid from 'react-css-grid'
+import Grid from "react-css-grid"
+import BingoNumbers from "../util/bingoNumbers.json"
 
 import { Colors } from "../util/Colors"
 
@@ -14,48 +15,35 @@ const BingoWrapper = styled.div`
 	color: ${Colors.offWhite};
 `
 
-const BoardWrapper = styled.div`
-display: grid;
+const GridCell = styled.div`
+width: 50px;
 height: 50px;
+background-color: ${Colors.gray}
 `
+
+const BoardWrapper = styled.div`
+	display: grid;
+	height: 50px;
+`
+
+const createGridContent = () => {
+	return BingoNumbers[0].Numbers.map(number => {
+		return number
+	})
+}
+
+const createGridCells = () => {
+  return <GridCell>Blank cell</GridCell>
+}
 
 const Footer = () => {
 	return (
 		<BingoWrapper>
-      <BoardWrapper>
-      <Grid
-        width={600}
-        gap={24}>
-        <div>Column</div>
-        <div>Column</div>
-        <div>Column</div>
-        <div>Column</div>
-        <div>Column</div>
-        <div>Column</div>
-        <div>Column</div>
-        <div>Column</div>
-        <div>Column</div>
-        <div>Column</div>
-        <div>Column</div>
-        <div>Column</div>
-        <div>Column</div>
-        <div>Column</div>
-        <div>Column</div>
-        <div>Column</div>
-        <div>Column</div>
-        <div>Column</div>
-        <div>Column</div>
-        <div>Column</div>
-        <div>Column</div>
-        <div>Column</div>
-        <div>Column</div>
-        <div>Column</div>
-        <div>Column</div>
-        <div>Column</div>
-        <div>Column</div>
-        <div>Column</div>
-      </Grid>
-      </BoardWrapper>
+			<BoardWrapper>
+				<Grid width={600} gap={24}>
+					{createGridCells()}
+				</Grid>
+			</BoardWrapper>
 		</BingoWrapper>
 	)
 }

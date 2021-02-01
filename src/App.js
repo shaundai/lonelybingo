@@ -2,6 +2,7 @@ import "./App.css"
 import styled from "styled-components"
 import { Colors } from "./util/Colors"
 
+import BingoBoard from "./Components/BingoBoard"
 import NumbersContainer from "./Components/NumbersContainer"
 import ComplimentCenter from './Components/ComplimentCenter'
 import Footer from './Components/Footer'
@@ -20,6 +21,7 @@ const App = () => {
 	return (
 		<AppContainer>
 			<NumbersContainer />
+      <BingoBoard />
       <ComplimentCenter />
       <Footer />
 		</AppContainer>

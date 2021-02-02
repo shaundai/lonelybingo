@@ -1,7 +1,8 @@
 export const Colors = {
-  mainBlue: "blue",
-  blue: 'lightblue',
-  darkBlue: 'darkblue',
-  offWhite: 'white',
-  gray: 'gray'
+  lightBlue: "#a8dadc",
+  blue: '#457b9d',
+  darkBlue: '#1d3557',
+  offWhite: '#f1faee',
+  gray: 'gray',
+  red: '#e63946'
 }

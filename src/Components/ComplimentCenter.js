@@ -8,8 +8,15 @@ const randomCompliment = Compliments[Math.floor(Math.random() * Compliments.leng
 const ComplimentWrapper = styled.div`
 display: flex;
 justify-content: center;
-width: 25vw;
-background-color: ${Colors.blue};
+align-items: center;
+text-align: center;
+font-size: .8em;
+color: ${Colors.darkBlue};
+width: 23vw;
+height: 10vh;
+border-radius: 5px;
+background-color: ${Colors.lightBlue};
+border: 1px solid ${Colors.darkBlue};
 `
 
 const ComplimentCenter = () => {

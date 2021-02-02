@@ -16,8 +16,8 @@ const BingoWrapper = styled.div`
 `
 
 const GridCell = styled.div`
-width: 50px;
-height: 50px;
+width: 8vw;
+height: 8vw;
 background-color: ${Colors.gray}
 `
 

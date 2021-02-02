@@ -8,7 +8,7 @@ const randomCompliment = Compliments[Math.floor(Math.random() * Compliments.leng
 const ComplimentWrapper = styled.div`
 display: flex;
 justify-content: center;
-width: 40vh;
+width: 25vw;
 background-color: ${Colors.blue};
 `
 

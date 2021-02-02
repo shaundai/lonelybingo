@@ -8,40 +8,47 @@ import { Colors } from "../util/Colors"
 const BingoWrapper = styled.div`
 	display: flex;
 	justify-content: center;
-	align-items: center;
-	height: auto;
-	background-color: ${Colors.darkBlue};
-	width: 100vw;
-	color: ${Colors.offWhite};
+  align-items: center;
+  background-color: ${Colors.darkBlue};
+  color: ${Colors.offWhite};
+  border: 1px solid ${Colors.gray};
 `
 
 const GridCell = styled.div`
 width: 8vw;
 height: 8vw;
-background-color: ${Colors.gray}
+background-color: ${Colors.gray};
+text-align: center;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 3em;
 `
 
 const BoardWrapper = styled.div`
-	display: grid;
-	height: 50px;
+  display: grid;
+  grid-template-columns: repeat(5, calc(8vw));
+  grid-template-rows: repeat(5, calc(8vw + 2px));
 `
 
-const createGridContent = () => {
-	return BingoNumbers[0].Numbers.map(number => {
-		return number
-	})
+const generateRandomBingoNumbers = () => {
+  const shuffled = BingoNumbers[0].Numbers.sort(() => 0.5 - Math.random());
+  const selectedFive = shuffled.slice(0, 5)
+  return selectedFive
 }
 
-const createGridCells = () => {
-  return <GridCell>Blank cell</GridCell>
+const createGridContent = () => {
+	return generateRandomBingoNumbers().map(number => {
+		return <GridCell>{number}</GridCell>
+	})
 }
 
 const Footer = () => {
 	return (
 		<BingoWrapper>
 			<BoardWrapper>
-				<Grid width={600} gap={24}>
-					{createGridCells()}
+				<Grid width={600} gap={2}>
+					{createGridContent()}
 				</Grid>
 			</BoardWrapper>
 		</BingoWrapper>
